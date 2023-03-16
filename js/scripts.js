@@ -15,7 +15,8 @@ fetch(url)
 
       pokemons.push({
         nome:val.name,
-        imagem:pokemonSingle.sprites.front_default
+        imagem:pokemonSingle.sprites.front_default,
+        info:pokemonSingle.types.map(info => info.type.name).join(" | ")
       })
 
       
@@ -28,8 +29,9 @@ fetch(url)
         pokemons.map((val) => {
           pokemonBoxe.innerHTML += `
           <div class="pokemon-box">
-            <img src="${val.imagem}" alt="imagem do dito">
+            <img src="${val.imagem}" alt="imagem do ${val.nome}">
             <p>${val.nome}</p>
+            <p>${val.info}</p>
           </div> 
           `
         })
