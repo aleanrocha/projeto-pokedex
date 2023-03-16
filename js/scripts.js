@@ -33,7 +33,7 @@ function pegarPokemon(quantidade) {
         pokemons.push({
           nome:val.name,
           imagem:pokemonSingle.sprites.front_default,
-          info:pokemonSingle.types.map(info => info.type.name).join(" | ")
+          info:pokemonSingle.types.map(info => info.type.name).join(" <> ")
         })
         exibirPokemon(pokemons, quantidade)
       })
