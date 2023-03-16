@@ -45,8 +45,12 @@ pegarPokemon(3)
 // eventos 
 
 btnQuantidade.addEventListener("click", () => {
-pegarPokemon(quantidade.value)
-quantidade.value = ""
+  if (quantidade.value != "") {
+    pegarPokemon(quantidade.value)
+    quantidade.value = ""
+  } else {
+    alert("Por favor, digite a quantidade de pokemons!")
+  }
 })
 
 document.addEventListener("keydown", (e) => {
