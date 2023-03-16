@@ -48,3 +48,9 @@ btnQuantidade.addEventListener("click", () => {
 pegarPokemon(quantidade.value)
 quantidade.value = ""
 })
+
+document.addEventListener("keydown", (e) => {
+  if(e.keyCode === 13) {
+    e.preventDefault()
+  }
+})
